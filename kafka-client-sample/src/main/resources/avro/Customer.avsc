@@ -1,0 +1,11 @@
+{
+     "type": "record",
+     "namespace": "com.example",
+     "name": "Customer",
+     "fields": [
+       { "name": "first_name", "type": "string", "doc": "Nome do cliente" },
+       { "name": "last_name", "type": "string", "doc": "Sobrenome do cliente Name of Customer" },
+       { "name": "age", "type": "int", "doc": "Idade do cliente" },
+       { "name": "automated_email", "type": "boolean", "default": true, "doc": "Campo indica se deseja receber emails promocionais" }
+     ]
+}
