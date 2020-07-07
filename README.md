@@ -20,20 +20,22 @@ O laboratório conta com:
 
 ## Subindo o cluster
 Para subir o cluster do Kafka, iremos usar o docker-compose localizado no diretório raiz do repositório (docker-compose.yml), então nesse diretório execute o comando abaixo:
-
-> $ docker-compose up -d
-
+```sh
+$ docker-compose up -d
+```
 A saída deve ser:
-
->Starting apache-kafka-basics_zookeeper-1_1   ... done
+```sh
+Starting apache-kafka-basics_zookeeper-1_1   ... done
 Starting apache-kafka-basics_zookeeper-3_1   ... done
 Starting apache-kafka-basics_zookeeper-2_1   ... done
 Starting apache-kafka-basics_kafka-2_1       ... done
 Starting apache-kafka-basics_kafka-3_1       ... done
 Starting apache-kafka-basics_kafka-1_1       ... done
-
+```
 ## Subindo o Schema Registry
->docker run -e SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS=localhost:19092,localhost:29092,localhost:39092 -e SCHEMA_REGISTRY_HOST_NAME=localhost --network host -d confluentinc/cp-schema-registry
+```sh
+$ docker run -e SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS=localhost:19092,localhost:29092,localhost:39092 -e SCHEMA_REGISTRY_HOST_NAME=localhost --network host -d confluentinc/cp-schema-registry
+```
  
 
 https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.13.0/jmx_prometheus_javaagent-0.13.0.jar
