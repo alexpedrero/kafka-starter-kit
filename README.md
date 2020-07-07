@@ -26,11 +26,11 @@ Para subir o cluster do Kafka, iremos usar o docker-compose localizado no diretÃ
 A saÃ­da deve ser:
 
 >Starting apache-kafka-basics_zookeeper-1_1   ... done
->Starting apache-kafka-basics_zookeeper-3_1   ... done
->Starting apache-kafka-basics_zookeeper-2_1   ... done
->Starting apache-kafka-basics_kafka-2_1       ... done
->Starting apache-kafka-basics_kafka-3_1       ... done
->Starting apache-kafka-basics_kafka-1_1       ... done
+Starting apache-kafka-basics_zookeeper-3_1   ... done
+Starting apache-kafka-basics_zookeeper-2_1   ... done
+Starting apache-kafka-basics_kafka-2_1       ... done
+Starting apache-kafka-basics_kafka-3_1       ... done
+Starting apache-kafka-basics_kafka-1_1       ... done
 
 ## Subindo o Schema Registry
 >docker run -e SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS=localhost:19092,localhost:29092,localhost:39092 -e SCHEMA_REGISTRY_HOST_NAME=localhost --network host -d confluentinc/cp-schema-registry
