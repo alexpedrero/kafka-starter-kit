@@ -14,7 +14,6 @@ O laboratório conta com:
  - Docker e Docker Compose;
  - Java 8;
  - IDE de desenvolvimento de sua preferencia (IntelliJ, VS Code);
- - 
 
 > **Nota:** Se estiver utilizando o macOS, sugiro subir o ambiente docker em um servidor virtual Linux (CentOS/Ubuntu)
 
