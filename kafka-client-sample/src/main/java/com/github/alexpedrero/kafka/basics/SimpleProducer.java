@@ -23,26 +23,24 @@ public class SimpleProducer {
         // create the producer
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
 
-        for (int i=0; i<2000000; i++) {
-            // create a new record
-            final ProducerRecord<String, String> record = new ProducerRecord<String, String>("sample-topic", "hello kafka " + Integer.toString(i));
+        // create a new record
+        final ProducerRecord<String, String> record = new ProducerRecord<String, String>("sample-topic", "Hello Kafka!!!");
 
-            //send data
-            producer.send(record, new Callback() {
-                public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-                    if(e == null) {
-                        // success!
-                        logger.info("Metadata received: \n" +
-                                "Topic:" + recordMetadata.topic() + "\n" +
-                                "Partition: " + recordMetadata.partition() + "\n" +
-                                "Offset: " + recordMetadata.offset() + "\n" +
-                                "Timestamp: " + recordMetadata.timestamp());
-                    } else {
-                        e.printStackTrace();
-                    }
+        //send data
+        producer.send(record, new Callback() {
+            public void onCompletion(RecordMetadata recordMetadata, Exception e) {
+                if(e == null) {
+                    // success!
+                    logger.info("Metadata received: \n" +
+                            "Topic:" + recordMetadata.topic() + "\n" +
+                            "Partition: " + recordMetadata.partition() + "\n" +
+                            "Offset: " + recordMetadata.offset() + "\n" +
+                            "Timestamp: " + recordMetadata.timestamp());
+                } else {
+                    e.printStackTrace();
                 }
-            });
-        }
+            }
+        });
 
         producer.flush();
         producer.close();
