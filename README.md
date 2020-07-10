@@ -50,4 +50,11 @@ $ docker run -e SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS=localhost:19092,loc
 
 Após isso o Schema Registry poderá ser acessado em <ip>:8081
  
+A partir daqui todos os exemplos disponíveis na aplicação Java disponivel no diretorio kafka-client-sample podem ser executados
 
+### Monitoração
+
+Para executar o setup de monitoração com o Prometheus Server e o Grafana, o artigo abaixo do Alvaro Bacelar é excelente! Só se atente que a parte de exposição das metricas ja foi feita nesse setup, então pode pular essa parte.
+https://medium.com/@alvarobacelar/monitorando-um-cluster-kafka-com-ferramentas-open-source-a4032836dc79
+
+Bons estudos :)
