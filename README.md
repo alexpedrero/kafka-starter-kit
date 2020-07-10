@@ -36,10 +36,18 @@ Starting apache-kafka-basics_kafka-2_1       ... done
 Starting apache-kafka-basics_kafka-3_1       ... done
 Starting apache-kafka-basics_kafka-1_1       ... done
 ```
+
+A partir desse ponto o cluster já esta pronto para uso.
+Os instancias de Zookeeper em <ip>:22181,<ip>:32181 e <ip>:42181
+Os brokers estão disponiveis em <ip>:19092, <ip>:29092 e <ip>:39092
+As métricas para coleta podem ser encontradas em <ip>:7071, <ip>:7072 e <ip>:7073
+
 ## Subindo o Schema Registry
 Para subir a instancia do Schema Registry para o cluster ativado no passo anterior, execute o comando abaixo (pode demorar um pouco, a imagem tem mais ou menos  1Gb):
 ```sh
 $ docker run -e SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS=localhost:19092,localhost:29092,localhost:39092 -e SCHEMA_REGISTRY_HOST_NAME=localhost --network host -d confluentinc/cp-schema-registry
 ```
+
+Após isso o Schema Registry poderá ser acessado em <ip>:8081
  
 
