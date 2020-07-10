@@ -16,6 +16,7 @@ O laboratório conta com:
  - Baixar os dois arquivos abaixo em um diretório etc/prometheus na raiz onde o docker-compose estiver rodando
 
 https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.12.0/jmx_prometheus_javaagent-0.12.0.jar
+
 https://raw.githubusercontent.com/prometheus/jmx_exporter/master/example_configs/kafka-2_0_0.yml
 
 > **Nota:** Se estiver utilizando o macOS, sugiro subir o ambiente docker em um servidor virtual Linux (CentOS/Ubuntu)
